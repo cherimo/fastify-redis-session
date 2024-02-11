@@ -22,6 +22,7 @@ function fastifyRedisSession (fastify, options, next) {
       return Reflect.set(target, param, value)
     }
   }
+  
   // Register decorators
   fastify.decorateRequest('session', null)
   fastify.addHook('onRequest', async (request, reply) => {
